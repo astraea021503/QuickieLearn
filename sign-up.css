@@ -1,0 +1,70 @@
+/* sign-up.css */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-image: url("banner-img-1.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.signup-container {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 30px; /* Increase padding for a bigger container */
+    border-radius: 10px;
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    overflow: auto;
+    max-height: 80vh;
+}
+
+h2 {
+    font-size: 28px; /* Increase font size for the title */
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin: 20px 0; /* Increase margin for form groups */
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 10px; /* Increase margin for labels */
+    font-weight: 600;
+    font-size: 18px; /* Increase font size for labels */
+}
+
+.form-group input {
+    width: 100%;
+    padding: 15px; /* Increase padding for input fields */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 18px; /* Increase font size for input fields */
+}
+
+.signup-button {
+    background-color: #49225B;
+    color: #fff;
+    border: none;
+    padding: 15px 30px; /* Increase padding for the button */
+    text-decoration: none;
+    display: block;
+    margin: 30px auto 15px; /* Increase margin for the button */
+    font-size: 20px; /* Increase font size for the button */
+    border-radius: 4px;
+    cursor: pointer;
+    text-align:center;
+    text-decoration: none;
+}
+
+

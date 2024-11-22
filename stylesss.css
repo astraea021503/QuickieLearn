@@ -1,0 +1,69 @@
+body {
+   font-family: 'Arial', sans-serif;
+   line-height: 1.6;
+   margin: 0;
+   background-color: #2e2e2e;
+   color: #fff;
+}
+header {
+   background-color: #49225B;
+   padding: 10px 20px;
+}
+.nav__links {
+   list-style: none;
+   display: flex;
+   justify-content: flex-end;
+}
+.nav__links li {
+   margin-left: 20px;
+}
+.nav__links a {
+   color: #fff;
+   text-decoration: none;
+   font-size: 18px;
+   transition: color 0.3s;
+}
+.nav__links a:hover {
+   color: #ddd;
+}
+.about__container {
+   max-width: 1100px;
+   margin: 20px auto;
+   padding: 20px;
+}
+.about__intro, .about__target-audience, .about__creators {
+   margin-bottom: 40px;
+}
+.about__intro h1 {
+   font-size: 36px;
+   color: #F5A623;
+}
+.about__target-audience h2, .about__creators h2 {
+   font-size: 28px;
+   border-bottom: 2px solid #F5A623;
+   display: inline-block;
+   margin-bottom: 10px;
+}
+.creators__profile {
+   display: flex;
+   align-items: center;
+   margin-top: 20px;
+}
+.profile__img {
+   width: 100px;
+   height: 100px;
+   border-radius: 50%;
+   margin-right: 20px;
+   border: 3px solid #F5A623;
+}
+.profile__details h3 {
+   font-size: 24px;
+   margin-bottom: 5px;
+}
+footer {
+   background-color: #1e1e1e;
+   text-align: center;
+   padding: 10px 0;
+   font-size: 14px;
+   color: #888;
+}

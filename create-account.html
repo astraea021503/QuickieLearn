@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Sign Up | Quickie PC</title>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" type="x-icon" href="qicon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="sign-up.css">
+
+
+    <script>
+        function displaySelectedImage(input) {
+            if (input.files && input.files[0]) {
+                const reader = new FileReader();
+                reader.onload = function (e) {
+                    const imageUrl = e.target.result;
+                    document.getElementById("selected-image").src = imageUrl;
+
+                    // Save the image URL to localStorage
+                    localStorage.setItem('profileImage', imageUrl);
+                };
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+
+        // Function to handle form submission
+        function handleFormSubmit() {
+            // The form is submitting, you can add additional logic here if needed
+            // ...
+
+            // Redirect to index.html after the form is submitted
+            window.location.href = 'index.html';
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="signup-container">
+            <h2>Sign Up</h2>
+            <form class="signup-form" action="process-signup.php" method="post" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label for="profile-picture">Profile Picture</label>
+                    <input type="file" id="profile-picture" name="profile-picture" accept="image/*" onchange="displaySelectedImage(this)">
+                </div>
+                <div class="form-group">
+                    <img id="selected-image" src="" alt="Selected Image" style="max-width: 100%; max-height: 300px;">
+                </div>
+                <div class="form-group">
+                    <label for="full-name">Full Name</label>
+                    <input type="text" id="full-name" name="full-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <div class="form-group">
+                    <label for="repeat-password">Repeat Password</label>
+                    <input type="password" id="repeat-password" name="repeat-password" required>
+                </div>
+                <!-- Other form fields -->
+                <div class="form-group">
+  <a href="javascript:void(0);" class="signup-button" onclick="handleFormSubmit()">Sign Up</a>
+</div>
+
+
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function handleFormSubmit() {
+            // The form is submitting, you can add additional logic here if needed
+            // ...
+
+            // Save the username to localStorage
+            var username = document.getElementById('username').value;
+            localStorage.setItem('username', username);
+
+            // Redirect to index.html after the form is submitted
+            window.location.href = 'index.html';
+        }
+    </script>
+
+
+
+
+</body>
+</html>
